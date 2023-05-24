@@ -10,8 +10,8 @@
 \tabular{ll}{
 Package: \tab WeightedPortTest\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-03-29\cr
+Version: \tab 1.1\cr
+Date: \tab 2023-05-23\cr
 License: \tab GPL (>=3)\cr
 LazyLoad: \tab yes\cr
 }
@@ -20,7 +20,7 @@ The two functions, \code{Weighted.Box.test()} and \code{Weighted.LM.test()}, can
 \author{
 Thomas J. Fisher and Colin M. Gallagher
 
-Maintainer: Thomas J. Fisher <fishertho@umkc.edu>
+Maintainer: Thomas J. Fisher <fishert4@miamioh.edu>
 }
 
 

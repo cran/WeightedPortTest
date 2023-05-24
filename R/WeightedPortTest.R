@@ -53,11 +53,11 @@ Weighted.Box.test <- function (x, lag = 1, type = c("Box-Pierce", "Ljung-Box", "
  {
     if( type == "Monti") {
        METHOD <- "Weighted Monti test (Gamma Approximation)"
-       cor <- acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[1:lag];
     }
     else {
-       cor <- acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[2:(lag + 1)];
     }
 
@@ -99,18 +99,18 @@ Weighted.Box.test <- function (x, lag = 1, type = c("Box-Pierce", "Ljung-Box", "
     PARAMETER <- c(shape, scale);
     names(PARAMETER) <- c("Shape", "Scale")
 
-    PVAL <- 1 - pgamma(STATISTIC, shape=shape, scale=scale)
+    PVAL <- stats::pgamma(STATISTIC, shape=shape, scale=scale, lower.tail=FALSE)
     names(PVAL) <- "Approximate p-value"
  }
  else #Not weighted
  {
     if( type == "Monti") {
        METHOD <- "Monti test"
-       cor <- acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[1:lag];
     }
     else {
-       cor <- acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[2:(lag + 1)];
     }
 
@@ -150,7 +150,7 @@ Weighted.Box.test <- function (x, lag = 1, type = c("Box-Pierce", "Ljung-Box", "
     PARAMETER <- c(mydf);
     names(PARAMETER) <- c("df")
 
-    PVAL <- 1 - pchisq(STATISTIC, df=mydf)
+    PVAL <- stats::pchisq(STATISTIC, df=mydf, lower.tail=FALSE)
     names(PVAL) <- "p-value"
 
  }
@@ -195,11 +195,11 @@ Weighted.LM.test <- function (x, h.t, lag = 1, type = c("correlation", "partial"
     x <- x^2/h.t;
 
     if( type == "partial") {
-       cor <- acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="partial", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[1:lag];
     }
     else {
-       cor <- acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
+       cor <- stats::acf(x, lag.max = lag, type="correlation", plot=FALSE, na.action=na.pass)
        obs <- cor$acf[2:(lag + 1)];
     }
 
@@ -239,7 +239,7 @@ Weighted.LM.test <- function (x, h.t, lag = 1, type = c("correlation", "partial"
        names(PARAMETER) <- c("Degrees of Freedom");
     }
   
-    PVAL <- 1 - pgamma(STATISTIC, shape=shape, scale=scale)
+    PVAL <- stats::pgamma(STATISTIC, shape=shape, scale=scale, lower.tail=FALSE)
     names(PVAL) <- "Approximate p-value"
 
     structure(list(statistic = STATISTIC, parameter = PARAMETER, 

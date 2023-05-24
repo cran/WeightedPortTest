@@ -1,6 +1,6 @@
-bd4dd3200dd2061f3f46b942f103afb0 *DESCRIPTION
-9fdfeb11f7ddba6f3aab9aaa6b1ac5dd *NAMESPACE
-1e14f1e204c61419bbbe82b0708438da *R/WeightedPortTest.R
-a28a4cd394d4552b33aefc58e6768ea1 *man/Weighted.Box.test.Rd
-f58468e524ece0fbaba0f2d30b677b2e *man/Weighted.LM.test.Rd
-ea037b9667fffc26381e6a8bddd0caba *man/WeightedPortTest-package.Rd
+afb30516558726f99fbcd677b9334b44 *DESCRIPTION
+31447514b0ee4b8a1987e601f67a7ede *NAMESPACE
+e2238fe2d94bb6a657eb4b28a6aa0503 *R/WeightedPortTest.R
+1b1525a149489267004f5d8dd92b47e9 *man/Weighted.Box.test.Rd
+9547744c82af589373cb2cda5f69d802 *man/Weighted.LM.test.Rd
+1c9a8cde32031af9407b612ab874500c *man/WeightedPortTest-package.Rd

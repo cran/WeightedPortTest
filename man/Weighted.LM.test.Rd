@@ -49,7 +49,7 @@ Weighted.LM.test(x, h.t, lag = 1,
 %% ...
 }
 \references{
-Fisher, T. J. and Gallagher, C. M. (2012), New Weighted Portmanteau Statistics for Time Series Goodness-of-Fit Testing. Journal of the American Statistical Association, accepted.
+Fisher, T. J. and Gallagher, C. M. (2012), New Weighted Portmanteau Statistics for Time Series Goodness-of-Fit Testing. Journal of the American Statistical Association, 107(498), 777-787.
 
 Li, W. K. and Mak, T. K. (1994), On the squared residual autocorrelations in non-linear time series with conditional heteroskedasticity. Journal of Time Series Analysis 15(6), 627-636.
 

@@ -3,3 +3,5 @@
 
 # Export all names
 exportPattern(".")
+
+importFrom("stats", "acf", "na.pass", "pchisq", "pgamma")
